@@ -55,7 +55,7 @@ then
 	if [ $WINE_VER == "winehq-stable" ]
 		then
 		echo 'Please select which Wine stable version you want to install:'
-		export WINE_OPT=("3.0" "4.0" "5.0" "6.0")
+		export WINE_OPT=("3.0" "4.0" "5.0" "6.0" "7.0")
 		select OPT3 in "${WINE_OPT[@]}"
 		do
         		case $OPT3 in
@@ -76,7 +76,12 @@ then
                                 	;;
 				"6.0")
                                 	echo "Using Wine $OPT3 to create the cache..."
-                                	export WINE_VER="winehq-stable=6.0.0~bionic-1 wine-stable=6.0.0~bionic-1 wine-stable-i386=6.0.0~bionic-1"
+                                	export WINE_VER="winehq-stable=6.0.0~bionic-1 wine-stable=6.0.4~bionic-1 wine-stable-i386=6.0.4~bionic-1"
+                                	break
+                                	;;
+				"7.0")
+                                	echo "Using Wine $OPT3 to create the cache..."
+                                	export WINE_VER="winehq-stable=7.0.0~bionic-1 wine-stable=7.0.0~bionic-1 wine-stable-i386=7.0.0~bionic-1"
                                 	break
                                 	;;
                 		*)      	echo "Invalid option $REPLY";;
@@ -85,7 +90,7 @@ then
 	elif [ $WINE_VER == "winehq-devel" ]
 		then
 		echo 'Please select which Wine devel version you want to install:'
-                export WINE_OPT=("3.10" "3.11" "3.12" "3.13" "3.14" "3.15" "3.16" "3.17" "3.18" "3.19" "3.20" "3.21" "4.0" "4.1" "4.2" "4.3" "4.4" "4.5" "4.6" "4.7" "4.8" "4.9" "4.10" "4.11" "4.12" "4.13" "4.14" "4.15" "4.16" "4.17" "4.18" "4.19" "4.20" "4.21" "5.0" "5.1" "5.2" "5.3" "5.4" "5.5" "5.6" "5.7" "5.8" "5.9" "5.10" "5.11" "5.12" "5.13" "5.14" "5.15" "5.16" "5.17" "5.18" "5.19" "5.20" "5.21" "5.22" "6.0" "6.1" "6.2" "6.3" "6.4" "6.5" "6.6")
+                export WINE_OPT=("3.10" "3.11" "3.12" "3.13" "3.14" "3.15" "3.16" "3.17" "3.18" "3.19" "3.20" "3.21" "4.0" "4.1" "4.2" "4.3" "4.4" "4.5" "4.6" "4.7" "4.8" "4.9" "4.10" "4.11" "4.12" "4.13" "4.14" "4.15" "4.16" "4.17" "4.18" "4.19" "4.20" "4.21" "5.0" "5.1" "5.2" "5.3" "5.4" "5.5" "5.6" "5.7" "5.8" "5.9" "5.10" "5.11" "5.12" "5.13" "5.14" "5.15" "5.16" "5.17" "5.18" "5.19" "5.20" "5.21" "5.22" "6.0" "6.1" "6.2" "6.3" "6.4" "6.5" "6.6" "6.7" "6.8" "6.9" "6.10" "6.11" "6.12" "6.13" "6.14" "6.15" "6.16" "6.17" "6.18" "6.19" "6.20" "6.21" "6.22" "6.23" "7.0" "7.1" "7.2" "7.3" "7.4" "7.5" "7.6" "7.7" "7.8" "7.9" "7.10" "7.11" "7.12" "7.13" "7.14" "7.15)
                 select OPT3 in "${WINE_OPT[@]}"
                 do
                         case $OPT3 in
