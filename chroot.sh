@@ -55,7 +55,7 @@ then
 	if [ $WINE_VER == "winehq-stable" ]
 		then
 		echo 'Please select which Wine stable version you want to install:'
-		export WINE_OPT=("3.0" "4.0" "5.0" "6.0" "7.0")
+		export WINE_OPT=("2.0" "3.0" "4.0" "5.0" "6.0" "7.0")
 		select OPT3 in "${WINE_OPT[@]}"
 		do
         		case $OPT3 in
