@@ -76,7 +76,7 @@ then
                                 	;;
 				"6.0")
                                 	echo "Using Wine $OPT3 to create the cache..."
-                                	export WINE_VER="winehq-stable=6.0.0~bionic-1 wine-stable=6.0.4~bionic-1 wine-stable-i386=6.0.4~bionic-1"
+                                	export WINE_VER="winehq-stable=6.0.4~bionic-1 wine-stable=6.0.4~bionic-1 wine-stable-i386=6.0.4~bionic-1"
                                 	break
                                 	;;
 				"7.0")
