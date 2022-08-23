@@ -59,6 +59,11 @@ then
 		select OPT3 in "${WINE_OPT[@]}"
 		do
         		case $OPT3 in
+                		"2.0")
+                        		echo "Using Wine $OPT3 to create the cache..."
+                        		export WINE_VER="winehq-stable=2.0.5~bionic wine-stable=2.0.5~bionic wine-stable-i386=2.0.5~bionic"
+                        		break
+                        		;;
                 		"3.0")
                         		echo "Using Wine $OPT3 to create the cache..."
                         		export WINE_VER="winehq-stable=3.0.5~bionic wine-stable=3.0.5~bionic wine-stable-i386=3.0.5~bionic"
@@ -90,10 +95,125 @@ then
 	elif [ $WINE_VER == "winehq-devel" ]
 		then
 		echo 'Please select which Wine devel version you want to install:'
-                export WINE_OPT=("3.10" "3.11" "3.12" "3.13" "3.14" "3.15" "3.16" "3.17" "3.18" "3.19" "3.20" "3.21" "4.0" "4.1" "4.2" "4.3" "4.4" "4.5" "4.6" "4.7" "4.8" "4.9" "4.10" "4.11" "4.12" "4.13" "4.14" "4.15" "4.16" "4.17" "4.18" "4.19" "4.20" "4.21" "5.0" "5.1" "5.2" "5.3" "5.4" "5.5" "5.6" "5.7" "5.8" "5.9" "5.10" "5.11" "5.12" "5.13" "5.14" "5.15" "5.16" "5.17" "5.18" "5.19" "5.20" "5.21" "5.22" "6.0" "6.1" "6.2" "6.3" "6.4" "6.5" "6.6" "6.7" "6.8" "6.9" "6.10" "6.11" "6.12" "6.13" "6.14" "6.15" "6.16" "6.17" "6.18" "6.19" "6.20" "6.21" "6.22" "6.23" "7.0" "7.1" "7.2" "7.3" "7.4" "7.5" "7.6" "7.7" "7.8" "7.9" "7.10" "7.11" "7.12" "7.13" "7.14" "7.15)
+                export WINE_OPT=("2.0" "2.1" "2.2" "2.3" "2.4" "2.5" "2.6" "2.7" "2.8" "2.9" "2.10" "2.11" "2.12" "2.13" "2.14" "2.15" "2.16" "2.17" "2.18" "2.19" "2.20" "2.21" "2.22" "3.10" "3.11" "3.12" "3.13" "3.14" "3.15" "3.16" "3.17" "3.18" "3.19" "3.20" "3.21" "4.0" "4.1" "4.2" "4.3" "4.4" "4.5" "4.6" "4.7" "4.8" "4.9" "4.10" "4.11" "4.12" "4.13" "4.14" "4.15" "4.16" "4.17" "4.18" "4.19" "4.20" "4.21" "5.0" "5.1" "5.2" "5.3" "5.4" "5.5" "5.6" "5.7" "5.8" "5.9" "5.10" "5.11" "5.12" "5.13" "5.14" "5.15" "5.16" "5.17" "5.18" "5.19" "5.20" "5.21" "5.22" "6.0" "6.1" "6.2" "6.3" "6.4" "6.5" "6.6" "6.7" "6.8" "6.9" "6.10" "6.11" "6.12" "6.13" "6.14" "6.15" "6.16" "6.17" "6.18" "6.19" "6.20" "6.21" "6.22" "6.23" "7.0" "7.1" "7.2" "7.3" "7.4" "7.5" "7.6" "7.7" "7.8" "7.9" "7.10" "7.11" "7.12" "7.13" "7.14" "7.15)
                 select OPT3 in "${WINE_OPT[@]}"
                 do
                         case $OPT3 in
+				"2.0")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.0~bionic wine-devel=2.0~bionic wine-devel-i386=2.0~bionic"
+                                        break
+                                        ;;
+                                "2.1")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.1~bionic wine-devel=2.1~bionic wine-devel-i386=2.1~bionic"
+                                        break
+                                        ;;
+                                "2.2")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.2~bionic wine-devel=2.2~bionic wine-devel-i386=2.2~bionic"
+                                        break
+                                        ;;
+                                "2.3")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.3~bionic wine-devel=2.3~bionic wine-devel-i386=2.3~bionic"
+                                        break
+                                        ;;
+                                "2.4")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.4~bionic wine-devel=2.4~bionic wine-devel-i386=2.4~bionic"
+                                        break
+                                        ;;
+                                "2.5")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.5~bionic wine-devel=2.5~bionic wine-devel-i386=2.5~bionic"
+                                        break
+                                        ;;
+								"2.6")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.6~bionic wine-devel=2.6~bionic wine-devel-i386=2.6~bionic"
+                                        break
+                                        ;;
+                                "2.7")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.7~bionic wine-devel=2.7~bionic wine-devel-i386=2.7~bionic"
+                                        break
+                                        ;;
+                                "2.8")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.8~bionic wine-devel=2.8~bionic wine-devel-i386=2.8~bionic"
+                                        break
+                                        ;;
+                                "2.9")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.9~bionic wine-devel=2.9~bionic wine-devel-i386=2.9~bionic"
+                                        break
+                                        ;;
+                                "2.10")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.10~bionic wine-devel=2.10~bionic wine-devel-i386=2.10~bionic"
+                                        break
+                                        ;;
+                                "2.11")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.11~bionic wine-devel=2.11~bionic wine-devel-i386=2.11~bionic"
+                                        break
+                                        ;;
+								"2.12")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.12~bionic wine-devel=2.12~bionic wine-devel-i386=2.12~bionic"
+                                        break
+                                        ;;
+                                "2.13")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.13~bionic wine-devel=2.13~bionic wine-devel-i386=2.13~bionic"
+                                        break
+                                        ;;
+                                "2.14")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.14~bionic wine-devel=2.14~bionic wine-devel-i386=2.14~bionic"
+                                        break
+                                        ;;
+                                "2.15")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.15~bionic wine-devel=2.15~bionic wine-devel-i386=2.15~bionic"
+                                        break
+                                        ;;
+                                "2.16")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.16~bionic wine-devel=2.16~bionic wine-devel-i386=2.16~bionic"
+                                        break
+                                        ;;
+                                "2.17")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.17~bionic wine-devel=2.17~bionic wine-devel-i386=2.17~bionic"
+                                        break
+                                        ;;
+								"2.18")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.18~bionic wine-devel=2.18~bionic wine-devel-i386=2.18~bionic"
+                                        break
+                                        ;;
+                                "2.19")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.19~bionic wine-devel=2.19~bionic wine-devel-i386=2.19~bionic"
+                                        break
+                                        ;;
+                                "2.20")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.20~bionic wine-devel=2.20~bionic wine-devel-i386=2.20~bionic"
+                                        break
+                                        ;;
+                                "2.21")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.21~bionic wine-devel=2.21~bionic wine-devel-i386=2.21~bionic"
+                                        break
+                                        ;;
+                                "2.22")
+                                        echo "Using Wine $OPT3 to create the cache..."
+                                        export WINE_VER="winehq-devel=2.22~bionic wine-devel=2.22~bionic wine-devel-i386=2.22~bionic"
+                                        break
+                                        ;;
                                 "3.10")
                                         echo "Using Wine $OPT3 to create the cache..."
                                         export WINE_VER="winehq-devel=3.10.0~bionic wine-devel=3.10.0~bionic wine-devel-i386=3.10.0~bionic"
